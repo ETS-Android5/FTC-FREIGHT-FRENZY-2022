@@ -1,20 +1,20 @@
 package org.firstinspires.ftc.teamcode.Helpers;
 
-public class EncoderHelper {
+public static class EncoderHelper {
     public EncoderHelper() {}
 
-    public void DriveToPositionAndStopAsync(List<DcMotor> motors, int ticks, double speed)
+    public static void driveToPositionAndStopAsync(List<BoosteamDcMotor> motors, double cm, double speed)
     {
         new Thread(() => {
-            DriveToPositionAndStop(motors, ticks, speed);
-        })
+            DriveToPositionAndStop(motors, cm, speed);
+        });
     }
 
-    public void DriveToPositionAndStop(List<DcMotor> motors, int ticks, double speed)
+    public static void driveToPositionAndStop(List<BoosteamDcMotor> motors, double cm, double speed)
     {
         for (DcMotor motor in motors)
         {
-            motor.setTargetPosition(ticks);
+            motor.setTargetPosition(motor.getTicksFromCM(cm));
             motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         }
 
