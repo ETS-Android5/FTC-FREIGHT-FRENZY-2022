@@ -11,11 +11,11 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 
 public class PumpSystem extends SystemBase {
-    private DcMotor _pumpMotor;
+    private BoosteamDcMotor _pumpMotor;
     private Gamepad _gamepad;
     private Telemetry _telemetry;
 
-    public PumpSystem(DcMotor motor, Gamepad gamepad, Telemetry telemetry) {
+    public PumpSystem(BoosteamDcMotor motor, Gamepad gamepad, Telemetry telemetry) {
         _pumpMotor = motor;
         _gamepad = gamepad;
         _telemetry = telemetry;

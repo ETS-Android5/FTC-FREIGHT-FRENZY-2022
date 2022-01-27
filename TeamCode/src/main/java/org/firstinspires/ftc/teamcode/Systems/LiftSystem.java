@@ -14,11 +14,11 @@ public class LiftSystem extends SystemBase {
     private final int LEVEL_DIFF_IN_TICKS = 200;
     private final double LIST_SPEED = 0.8;
 
-    private DcMotor _liftMotor;
+    private BoosteamDcMotor _liftMotor;
     private Gamepad _gamepad;
     private Telemetry _telemetry;
 
-    public LiftSystem(DcMotor motor, Gamepad gamepad, Telemetry telemetry) {
+    public LiftSystem(BoosteamDcMotor motor, Gamepad gamepad, Telemetry telemetry) {
         _liftMotor = motor;
         _gamepad = gamepad;
         _telemetry = telemetry;

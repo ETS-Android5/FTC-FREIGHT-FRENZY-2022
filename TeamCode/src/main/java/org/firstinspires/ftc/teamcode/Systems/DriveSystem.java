@@ -7,14 +7,14 @@ import org.firstinspires.ftc.teamcode.Abstract.SystemBase;
 
 public class DriveSystem extends SystemBase {
 
-    private DcMotor _leftFront;
-    private DcMotor _leftBack;
-    private DcMotor _rightFront;
-    private DcMotor _rightBack;
+    private BoosteamDcMotor _leftFront;
+    private BoosteamDcMotor _leftBack;
+    private BoosteamDcMotor _rightFront;
+    private BoosteamDcMotor _rightBack;
 
     private Gamepad _gamepad;
 
-    public DriveSystem(DcMotor leftFront, DcMotor leftBack, DcMotor rightFront, DcMotor rightBack, Gamepad gamepad) {
+    public DriveSystem(BoosteamDcMotor leftFront, BoosteamDcMotor leftBack, BoosteamDcMotor rightFront, BoosteamDcMotor rightBack, Gamepad gamepad) {
         _leftBack = leftBack;
         _leftFront = leftFront;
         _rightBack = rightBack;
