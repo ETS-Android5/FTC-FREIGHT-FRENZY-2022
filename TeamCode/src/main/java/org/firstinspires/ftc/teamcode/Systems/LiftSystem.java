@@ -32,7 +32,31 @@ public class LiftSystem extends SystemBase {
             int pos = _liftMotor.getPosition();
             int ticks = LEVEL_DIFF_IN_TICKS - pos;
             // drive to posision
-            // DriveToPositionAndStopAsync([motor], ticks, speed);
+            // DriveToPositionAndStopAsync(List.of(motor), ticks, speed);
+            // turn on pump
+        }
+        if (_gamepad.b) {
+            _telemetry.addData("Status", "lift goes to second level");
+            _telemetry.update();
+            int pos = _liftMotor.getPosition();
+            int ticks = 2 * LEVEL_DIFF_IN_TICKS - pos;
+            // drive to posision
+            // DriveToPositionAndStopAsync(List.of(motor), ticks, speed);
+        }
+        if (_gamepad.y) {
+            _telemetry.addData("Status", "lift goes to third level");
+            _telemetry.update();
+            int pos = _liftMotor.getPosition();
+            int ticks = 3 * LEVEL_DIFF_IN_TICKS - pos;
+            // drive to posision
+            // DriveToPositionAndStopAsync(List.of(motor), ticks, speed);
+        }
+        if (_gamepad.x) {
+            _telemetry.addData("Status", "lift goes to zero level");
+            _telemetry.update();
+            int pos = _liftMotor.getPosition();
+            // drive to posision
+            // DriveToPositionAndStopAsync(List.of(motor), 0, speed);
         }
         else
             _liftMotor.setPower(0);
